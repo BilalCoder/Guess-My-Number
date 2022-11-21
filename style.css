@@ -18,6 +18,10 @@ body {
     /* background-color: #60b347; */
 }
 
+.wrapper {
+    position: relative;
+}
+
 /* LAYOUT */
 header {
     position: relative;
@@ -80,6 +84,7 @@ h1 {
     position: absolute;
     top: 2rem;
     left: 2rem;
+    z-index: 1;
 }
 
 .guess {
@@ -116,4 +121,31 @@ h1 {
 
 .label-score {
     margin-bottom: 2rem;
+}
+
+.d-none {
+    display: none;
+}
+
+.myCanvas {
+    position: absolute;
+    top: 0;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
